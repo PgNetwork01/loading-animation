@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Dots Loader</title>
+    <style>
+        .loader2 {
+            display: flex;
+            justify-content: space-around;
+            width: 100px;
+        }
+
+        .loader2 div {
+            width: 18px;
+            height: 18px;
+            background-color: #3498db;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .loader2 div:nth-child(1) { animation-delay: -0.32s; }
+        .loader2 div:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
