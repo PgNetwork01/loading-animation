@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Squares Loader</title>
+    <style>
+        .loader6 {
+            width: 64px;
+            height: 64px;
+            display: inline-block;
+            position: relative;
+            animation: spin-squares 1.2s infinite ease-in-out;
+        }
+
+        .loader6 div {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #3498db;
+            animation: spin-squares-div 1.2s infinite ease-in-out;
+        }
+
+        .loader6 div:nth-child(1) { top: 0; left: 0; animation-delay: -0.4s; }
+        .loader6 div:nth-child(2) { top: 0; right: 0; animation-delay: -0.8s; }
+        .loader6 div:nth-child(3) { bottom: 0; right: 0; animation-delay: -1.2s; }
+        .loader6 div:nth-child(4) { bottom: 0; left: 0; animation-delay: -1.6s; }
+
+        @keyframes spin-squares {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+
+        @keyframes spin-squares-div {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(0.5); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader6">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
